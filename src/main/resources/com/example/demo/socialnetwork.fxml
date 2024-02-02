@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.EditController">
+  <tabs>
+    <Tab text="USERS">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tableView" layoutX="241.0" layoutY="18.0" onMousePressed="#handleSelectUser" prefHeight="305.0" prefWidth="354.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnID" prefWidth="74.39999389648438" text="ID" />
+                      <TableColumn fx:id="tableColumnFN" prefWidth="142.79998779296875" text="FIRST NAME" />
+                        <TableColumn fx:id="tableColumnLN" prefWidth="140.40005493164062" text="LAST NAME" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="50.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleAddUser" prefHeight="26.0" prefWidth="138.0" text="ADD" />
+                  <Button layoutX="50.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleDeleteUser" prefHeight="26.0" prefWidth="139.0" text="DELETE" />
+                  <Button layoutX="50.0" layoutY="288.0" mnemonicParsing="false" onAction="#handleUpdateUser" prefHeight="26.0" prefWidth="140.0" text="UPDATE" />
+                  <Button layoutX="49.0" layoutY="326.0" mnemonicParsing="false" onAction="#handleFindUser" prefHeight="26.0" prefWidth="141.0" text="FIND" />
+                   <TextField fx:id="TextID" layoutX="14.0" layoutY="17.0" prefHeight="37.0" prefWidth="208.0" promptText="ID" />
+                   <TextField fx:id="TextFN" layoutX="13.0" layoutY="68.0" prefHeight="38.0" prefWidth="207.0" promptText="FIRST NAME" />
+                   <TextField fx:id="TextLN" layoutX="13.0" layoutY="117.0" prefHeight="42.0" prefWidth="207.0" promptText="LAST NAME" />
+                   <Button fx:id="ExitButton" layoutX="534.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleExitButton" prefHeight="26.0" prefWidth="61.0" text="EXIT" />
+                   <Button layoutX="250.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleLastPage" prefHeight="26.0" prefWidth="61.0" text="LAST" />
+                   <Button layoutX="320.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleNextPage" prefHeight="26.0" prefWidth="61.0" text="NEXT" />
+                   <TextField fx:id="pageSizeTextField" layoutX="390.0" layoutY="327.0" prefHeight="26.0" prefWidth="61.0" promptText="Page Size" />
+                   <Button layoutX="460.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleSetPageSize" prefHeight="26.0" prefWidth="61.0" text="Set Size" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

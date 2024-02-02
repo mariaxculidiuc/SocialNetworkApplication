@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.AddController">
+  <tabs>
+    <Tab text="ADD_FRIENDS">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+
+                  <Button fx:id="add" layoutX="56.0" layoutY="285.0" mnemonicParsing="false" onAction="#handle_add_friend" prefHeight="33.0" prefWidth="156.0" text="ADD FRIEND" />
+
+                   <TextField fx:id="text_fn" layoutX="24.0" layoutY="143.0" prefHeight="50.0" prefWidth="220.0" promptText="First Name" />
+                  <TextField fx:id="text_ln" layoutX="22.0" layoutY="209.0" prefHeight="50.0" prefWidth="223.0" promptText="Last Name" />
+                   <TableView fx:id="tableFriends" layoutX="263.0" layoutY="33.0" prefHeight="285.0" prefWidth="326.0">
+                    <columns>
+                        <TableColumn fx:id="tableColumnFN" prefWidth="122.0" text="FIRST NAME" />
+                        <TableColumn fx:id="tableColumnLN" prefWidth="127.20004272460938" text="LAST NAME" />
+                    </columns>
+                  </TableView>
+                   <Button fx:id="exit1" layoutX="510.0" layoutY="324.0" mnemonicParsing="false" onAction="#handle_exit1" prefHeight="27.0" prefWidth="77.0" text="EXIT" />
+                  <Label layoutX="263.0" layoutY="-4.0" prefHeight="36.0" prefWidth="299.0" text="YOUR FRIENDS:" />
+                  <Label layoutX="22.0" layoutY="103.0" prefHeight="26.0" prefWidth="115.0" text="YOUR ACCOUNT" textAlignment="CENTER">
+                  </Label>
+                  <TextField fx:id="fn_account" layoutX="114.0" layoutY="32.0" prefHeight="26.0" prefWidth="139.0" />
+                  <TextField fx:id="ln_account" layoutX="115.0" layoutY="58.0" prefHeight="26.0" prefWidth="137.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="FRIEND_REQUESTS">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                   <TableView fx:id="tableFriendsRequests" layoutX="199.0" layoutY="33.0" prefHeight="286.0" prefWidth="390.0">
+                     <columns>
+                        <TableColumn fx:id="tableColumnFN2" prefWidth="122.0" text="FIRST NAME" />
+                        <TableColumn fx:id="tableColumnLN2" prefWidth="127.20004272460938" text="LAST NAME" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="exit2" layoutX="510.0" layoutY="324.0" mnemonicParsing="false" onAction="#handle_exit2" prefHeight="27.0" prefWidth="77.0" text="EXIT" />
+                  <Label layoutX="200.0" layoutY="-4.0" prefHeight="36.0" prefWidth="362.0" text="FRIEND REQUESTS:" />
+                  <Button layoutX="36.0" layoutY="96.0" mnemonicParsing="false" onAction="#handleAccept" prefHeight="49.0" prefWidth="142.0" text="ACCEPT" />
+                  <Button layoutX="34.0" layoutY="186.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="52.0" prefWidth="146.0" text="DELETE" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="CHAT">
+          <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="272.0" layoutY="7.0" prefHeight="23.0" prefWidth="298.0" text="Message:">
+                  </Label>
+                   <Button layoutX="512.0" layoutY="304.0" mnemonicParsing="false" onAction="#handleSend" prefHeight="39.0" prefWidth="58.0" text="SEND" />
+                   <Button layoutX="90.0" layoutY="304.0" mnemonicParsing="false" onAction="#handleLastPage" prefHeight="39.0" prefWidth="58.0" text="LAST" />
+                   <Button layoutX="160.0" layoutY="304.0" mnemonicParsing="false" onAction="#handleNextPage" prefHeight="39.0" prefWidth="58.0" text="NEXT" />
+                   <TableView fx:id="table_list_friends" layoutX="45.0" layoutY="50.0" onMousePressed="#handleSelect" prefHeight="248.0" prefWidth="200.0" >
+                    <columns>
+                      <TableColumn fx:id="tableColumnFN3" prefWidth="96.39999771118164" text="FIRST NAME" />
+                      <TableColumn fx:id="tableColumnLN3" prefWidth="103.60000610351562" text="LAST NAME" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="message" layoutX="261.0" layoutY="305.0" prefHeight="38.0" prefWidth="249.0" />
+                  <ListView fx:id="listMessages" layoutX="262.0" layoutY="61.0" prefHeight="225.0" prefWidth="301.0" />
+               </children></AnchorPane>
+          </content>
+      </Tab>
+  </tabs>
+</TabPane>
